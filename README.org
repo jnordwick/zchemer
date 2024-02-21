@@ -1,0 +1,14 @@
+** Some dump functional proof of concepts iun zig.
+
+- The iterators will compile to same code as loops for ReleaseSmall,
+but slightly different on ReleaseFast. 
+- The context and setjmp/longjmp doesn't compile under current zig due
+to prototype differences between c and zig.
+- amb should work for functions that don't require non-local state to
+get the correct answer once the longjmp or context stuff works.
+
+** next on list
+- [ ] generators and yield
+- [ ] stupid continuation tricks around @Frame copying
+
+
